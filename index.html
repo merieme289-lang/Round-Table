@@ -29,16 +29,6 @@
             position: relative;
         }
 
-        /* Home Button */
-        .home-btn {
-            font-size: 22px;
-            text-decoration: none;
-            background: #eef6f7;
-            padding: 8px 12px;
-            border-radius: 12px;
-            display: inline-block;
-        }
-
         /* Brand Title */
         .brand-title {
             font-size: 26px;
@@ -116,11 +106,11 @@
         }
 
         /* Call to Action Button */
-        .afghan-btn {
+        .join-btn {
             display: inline-block;
             background: linear-gradient(135deg, #0d5c75, #1995ad);
             color: white;
-            padding: 15px 35px;
+            padding: 15px 45px;
             font-size: 20px;
             font-weight: bold;
             text-decoration: none;
@@ -129,21 +119,71 @@
             transition: transform 0.2s, background 0.3s;
         }
 
-        .afghan-btn:hover {
+        .join-btn:hover {
             transform: translateY(-3px);
             background: linear-gradient(135deg, #1995ad, #0d5c75);
         }
 
+        /* About Section */
+        .about-section {
+            margin-top: 50px;
+            padding: 30px 25px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        .about-section h2 {
+            color: #0d5c75;
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .about-section h2:first-child {
+            margin-top: 0;
+        }
+
+        .about-section p {
+            color: #4f6367;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .about-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .about-section ul li {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-quote {
+            text-align: center;
+            font-weight: bold;
+            color: #0d5c75;
+            margin-top: 25px;
+            font-size: 18px;
+        }
+
         /* Contact Section */
         .contact-info {
-            margin-top: 50px;
+            margin-top: 40px;
             padding: 25px;
             background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.05);
             display: inline-block;
             width: 100%;
-            max-width: 500px;
         }
 
         .contact-info h3 {
@@ -176,18 +216,17 @@
 <body>
 
     <header>
-        <a href="#" class="home-btn" title="Home">🏠</a>
         <div class="brand-title">Round Table</div>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
         <nav id="dropdown-menu">
             <a href="#">Home</a>
-            <a href="#">About</a>
+            <a href="#about">About</a>
             <a href="#">Sessions</a>
             <a href="#">Community</a>
             <a href="#">Projects</a>
             <a href="#afghan-learning">Afghan Learning</a>
-            <a href="#">Join Us</a>
+            <a href="#join-us">Join Us</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -201,8 +240,38 @@
             An international youth platform connecting young minds from diverse cultures to learn, lead, and drive real change.
         </p>
 
-        <!-- Afghan Learning CTA Button -->
-        <a href="#afghan-learning" class="afghan-btn">Afghan Learning</a>
+        <!-- Join Us CTA Button -->
+        <a href="#join-us" class="join-btn" id="join-us">Join Us</a>
+
+        <!-- About Section -->
+        <div class="about-section" id="about">
+            <h2>🌍 What is Round Table?</h2>
+            <p>
+                Round Table is a youth-led initiative that brings young people from different cultures and backgrounds together to connect, share ideas, and learn from one another.
+            </p>
+            <p>
+                The idea is based on the concept of a round table, where everyone has an equal place and every voice matters. Through dialogue, cultural exchange, and collaborative activities, young people can build understanding, develop leadership skills, and create meaningful connections across borders.
+            </p>
+
+            <h2>🎯 Our Mission</h2>
+            <p>Our mission is to create a safe and inclusive space where young people can:</p>
+            <ul>
+                <li>🌎 Discover different cultures and perspectives.</li>
+                <li>💬 Share their ideas and experiences.</li>
+                <li>🤝 Build international connections and friendships.</li>
+                <li>🗣️ Develop communication and leadership skills.</li>
+                <li>💡 Collaborate on ideas and solutions.</li>
+                <li>❤️ Promote respect, understanding, and cultural diversity.</li>
+            </ul>
+
+            <h2>✨ Why Round Table?</h2>
+            <p>
+                We believe that diversity makes conversations stronger. When young people from different backgrounds sit at the same table, they don't just exchange ideas — they learn to understand one another.
+            </p>
+            <p class="about-quote">
+                One Table. Many Cultures. A Brighter Future.
+            </p>
+        </div>
 
         <!-- Contact Section -->
         <div class="contact-info" id="contact">
@@ -227,3 +296,4 @@
 
 </body>
 </html>
+
