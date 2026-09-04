@@ -1,40 +1,229 @@
-<DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"
-  <title>Round Table</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Table</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f8f9;
+            color: #2b3a42;
+            text-align: center;
+        }
+
+        /* Header Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        /* Home Button */
+        .home-btn {
+            font-size: 22px;
+            text-decoration: none;
+            background: #eef6f7;
+            padding: 8px 12px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        /* Brand Title */
+        .brand-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #0d5c75;
+            letter-spacing: 1px;
+        }
+
+        /* Menu Button */
+        .menu-btn {
+            font-size: 24px;
+            cursor: pointer;
+            background: #eef6f7;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            color: #0d5c75;
+        }
+
+        /* Dropdown Navigation Menu */
+        nav {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            width: 210px;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        nav.active {
+            display: block;
+        }
+
+        nav a {
+            display: block;
+            padding: 12px 20px;
+            color: #0d5c75;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #1995ad;
+            color: #ffffff;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Logo Image */
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* Description Paragraph */
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #4f6367;
+            margin-bottom: 30px;
+        }
+
+        /* Call to Action Button */
+        .afghan-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0d5c75, #1995ad);
+            color: white;
+            padding: 15px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(25, 149, 173, 0.4);
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .afghan-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #1995ad, #0d5c75);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            margin-top: 50px;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contact-info h3 {
+            color: #0d5c75;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .contact-item a {
+            color: #1995ad;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <header>
-  <h1>Round Table</h1>
-  <P>ONE TABLE | MANY CULTURES | A BRIGHTER FUTURE</P> 
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Sessions</a>/</li>
-      <li><a href="#">Community</a></li>
-      <li><a herf="#">Projects</a></li>
-      <li><a herf="#">Join Us</a></li>
-      <li><a herf="#">Contact</a></li>
-    </ul>
-  </nav>
+    <header>
+        <a href="#" class="home-btn" title="Home">🏠</a>
+        <div class="brand-title">Round Table</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-  <main>
-    <h2>Welcome to Round Table</h2>
-    <p>An inetrnational youth platform connecting young minds from diverse cultures to learn, lead,and drive real change.</p>
-    <img src="1000048149.png" alt="Round Table Logo" Styile="max-width: 400px; display: block; margin: 20px auto; border-radius: 8px;">
-    <section>
-      <h3>Our Core Values</h3>
-      <ul>
-        <li><strong>Learn:</strong> Exchange cultural and professional expriences.</li>
-        <li><strong>Lead:</strong> Develop leadership,public speaking,and team work skills.</li>
-        <li><strong>Change:</strong> Turn ideas into real-world projects and action.</li>
-      </ul>
-   </section>
-  </main>
+        <nav id="dropdown-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Sessions</a>
+            <a href="#">Community</a>
+            <a href="#">Projects</a>
+            <a href="#afghan-learning">Afghan Learning</a>
+            <a href="#">Join Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Logo Image -->
+        <img src="1000048149.png" alt="Round Table Logo" class="logo-img">
+
+        <!-- Description -->
+        <p class="description">
+            An international youth platform connecting young minds from diverse cultures to learn, lead, and drive real change.
+        </p>
+
+        <!-- Afghan Learning CTA Button -->
+        <a href="#afghan-learning" class="afghan-btn">Afghan Learning</a>
+
+        <!-- Contact Section -->
+        <div class="contact-info" id="contact">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+                <span>💬 WhatsApp:</span>
+                <a href="https://wa.me/2130696890644" target="_blank">+213 0696890644</a>
+            </div>
+            <div class="contact-item">
+                <span>✉️ Email:</span>
+                <a href="mailto:roundtable165.org@gmail.com">roundtable165.org@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdown-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
 </body>
 </html>
