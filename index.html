@@ -177,51 +177,86 @@
             font-size: 18px;
         }
 
-        /* Sessions Section */
+        /* Custom Sessions Card Design */
         .sessions-section {
             margin-top: 50px;
-            padding: 30px 25px;
+            padding: 35px 25px;
             background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(13, 92, 117, 0.08);
             text-align: left;
             line-height: 1.7;
+            border-top: 5px solid #0d5c75;
         }
 
-        .sessions-section h2 {
+        .session-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #e0f2f1;
+        }
+
+        .session-header h2 {
+            color: #0b3c5d;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .session-header .subtitle {
             color: #0d5c75;
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .sessions-section .intro-text {
+            color: #4f6367;
+            font-size: 16px;
+            margin-bottom: 25px;
             text-align: center;
         }
 
-        .session-img {
-            width: 100%;
-            height: auto;
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .topic-card {
+            background-color: #f8fcff;
+            border: 1px solid #e1eff5;
+            padding: 15px 18px;
             border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .sessions-section p {
-            color: #4f6367;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .sessions-section ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 20px;
-        }
-
-        .sessions-section ul li {
-            color: #333;
-            font-size: 16px;
-            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a3644;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(13, 92, 117, 0.1);
+            background-color: #ffffff;
+        }
+
+        .topic-icon {
+            font-size: 22px;
+            background: #e6f4f8;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
         }
 
         /* Contact Section */
@@ -322,25 +357,43 @@
             </p>
         </div>
 
-        <!-- Sessions Section -->
+        <!-- Interactive Sessions Section -->
         <div class="sessions-section" id="sessions">
-            <h2>✨ Our Interactive Sessions</h2>
-            
-            <!-- Session Banner Image -->
-            <img src="1000048778.png" alt="Youth Round Table Sessions" class="session-img">
+            <div class="session-header">
+                <h2>Youth Round Table</h2>
+                <div class="subtitle">ONE TABLE | MANY CULTURES | A BRIGHTER FUTURE</div>
+            </div>
 
-            <p>
-                In our sessions, we cover all topics concerning today's youth. We create a welcoming environment where you can express yourself, grow, and connect with people worldwide.
+            <p class="intro-text">
+                In our interactive sessions, we cover essential topics to empower youth, build leadership skills, and foster cross-cultural connection.
             </p>
 
-            <ul>
-                <li>🌱 Leadership & Environment</li>
-                <li>🎓 Education & Academics</li>
-                <li>💡 Self-Development & Awareness</li>
-                <li>🤝 Building a Diplomatic & Confident Personality</li>
-                <li>🌍 Sharing Cultures & Ideas Without Limits</li>
-                <li>🏛️ Attending & Participating in Conferences</li>
-            </ul>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <span class="topic-icon">🌱</span>
+                    <span>Leadership & Environment</span>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-icon">🎓</span>
+                    <span>Education & Academics</span>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-icon">💡</span>
+                    <span>Self-Development & Awareness</span>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-icon">🤝</span>
+                    <span>Diplomatic & Confident Personality</span>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-icon">🌍</span>
+                    <span>Sharing Cultures & Ideas Without Limits</span>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-icon">🏛️</span>
+                    <span>Attending Conferences & Events</span>
+                </div>
+            </div>
         </div>
 
         <!-- Contact Section -->
@@ -366,5 +419,6 @@
 
 </body>
 </html>
+
 
 
