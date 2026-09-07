@@ -26,7 +26,9 @@
             padding: 15px 25px;
             background-color: #ffffff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         /* Brand Title */
@@ -175,6 +177,53 @@
             font-size: 18px;
         }
 
+        /* Sessions Section */
+        .sessions-section {
+            margin-top: 50px;
+            padding: 30px 25px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        .sessions-section h2 {
+            color: #0d5c75;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .session-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .sessions-section p {
+            color: #4f6367;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .sessions-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .sessions-section ul li {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         /* Contact Section */
         .contact-info {
             margin-top: 40px;
@@ -222,7 +271,7 @@
         <nav id="dropdown-menu">
             <a href="#">Home</a>
             <a href="#about">About</a>
-            <a href="#">Sessions</a>
+            <a href="#sessions">Sessions</a>
             <a href="#">Community</a>
             <a href="#">Projects</a>
             <a href="#afghan-learning">Afghan Learning</a>
@@ -273,6 +322,27 @@
             </p>
         </div>
 
+        <!-- Sessions Section -->
+        <div class="sessions-section" id="sessions">
+            <h2>✨ Our Interactive Sessions</h2>
+            
+            <!-- Session Banner Image -->
+            <img src="1000048778.png" alt="Youth Round Table Sessions" class="session-img">
+
+            <p>
+                In our sessions, we cover all topics concerning today's youth. We create a welcoming environment where you can express yourself, grow, and connect with people worldwide.
+            </p>
+
+            <ul>
+                <li>🌱 Leadership & Environment</li>
+                <li>🎓 Education & Academics</li>
+                <li>💡 Self-Development & Awareness</li>
+                <li>🤝 Building a Diplomatic & Confident Personality</li>
+                <li>🌍 Sharing Cultures & Ideas Without Limits</li>
+                <li>🏛️ Attending & Participating in Conferences</li>
+            </ul>
+        </div>
+
         <!-- Contact Section -->
         <div class="contact-info" id="contact">
             <h3>Contact Us</h3>
@@ -296,4 +366,5 @@
 
 </body>
 </html>
+
 
